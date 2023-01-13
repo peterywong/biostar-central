@@ -44,12 +44,12 @@
       when: bin_conda.stat.exists == False
 
     - name: Install conda
-      shell: "/tmp/conda.sh -b -p {{ conda_dir }} creates={{ conda_dir }} executable=/bin/bash"
+      shell: "bash /tmp/conda.sh -b -p {{ conda_dir }} creates={{ conda_dir }} executable=/bin/bash"
       register: conda_installed
       when: conda_downloaded is success
 
     - name: Create environments
-      shell: "{{ conda_dir }}/bin/conda create --yes -q -n {{ item.name }} python={{ item.python_version }} creates={{ conda_dir }}/envs/{{ item.name }}"
+      shell: "{{ conda_dir }}/bin/conda create --yes -q -n {{ item.name }} python=3.10 creates={{ conda_dir }}/envs/{{ item.name }}"
       when: conda_installed is success
       with_items: "{{conda_environments}}"
 
