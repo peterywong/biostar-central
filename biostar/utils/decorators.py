@@ -1,7 +1,7 @@
 import logging, functools, time, os
 from functools import wraps
 from functools import partial
-from ratelimit.decorators import ratelimit
+from django_ratelimit.decorators import ratelimit
 from django.conf import settings
 from django.http import Http404
 from django.shortcuts import redirect
