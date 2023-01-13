@@ -3,7 +3,7 @@
 #
 
 # The git location that will be cloned.
-engine_git:  "{{ repo | default('https://github.com/ialbert/biostar-central.git') }}"
+engine_git:  "{{ repo | default('https://github.com/peterywong/biostar-central.git') }}"
 
 # The git location that will be cloned.
 engine_branch:  "{{ branch | default('master') }}"
