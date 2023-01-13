@@ -74,7 +74,7 @@ DEFAULT_APPS = [
     'mailer',
     'compressor',
     'taggit',
-    'snowpenguin.django.recaptcha2',
+    'snowpenguin.django.recaptcha',
 
 ]
 
